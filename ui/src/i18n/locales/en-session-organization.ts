@@ -324,13 +324,11 @@ const enSessionOrganization = {
     confirmForceDelete: "Snapshot failed: {error}\n\nUncommitted changes are lost.",
   },
   projectsPage: {
-    title: "Projects",
-    subtitle: "Repositories and agent workspaces people can start sessions in.",
     search: "Search projects",
     columnProject: "Project",
     columnType: "Type",
     columnLocation: "Location",
-    columnAccess: "Who can use it",
+    columnAccess: "Shared with",
     typeWorkspace: "Agent workspace",
     typeCheckout: "Git checkout",
     typeClone: "Git checkout · cloned",
@@ -362,7 +360,7 @@ const enSessionOrganization = {
     removeClonedBody:
       "People can no longer start sessions in this project. You can keep the cloned checkout on disk or delete it.",
     removeDeleteCheckout: "Remove and delete checkout",
-    accessHeading: "Who can use it",
+    accessHeading: "Shared with roles",
     accessEveryone: "Everyone with write access",
     accessNoRoles:
       "Named roles aren’t configured. Operators with write access can use every project.",
@@ -374,7 +372,9 @@ const enSessionOrganization = {
     accessAgentsNote:
       "Agent workspaces follow each role’s agent list in the Gateway configuration.",
     accessAdminRequired: "Only admins can change who can use a project.",
-    accessWorktreeNote: "Restricted roles always get a new worktree.",
+    accessPublicNote: "Roles without write access can also use public GitHub repositories.",
+    accessWorktreeNote:
+      "Roles that can use this project only through this share always get a new worktree.",
     accessUnavailable: "Role access is unavailable until the Gateway configuration loads.",
     accessSaveFailed: "Couldn’t save access for {role}. Try again.",
     accessRoleMissing: "The role {role} is no longer configured.",
