@@ -72,3 +72,12 @@ export type AdmittedRunOperatorAuthority = Readonly<{
   /** Committed policy changes invalidate only executions using a removed model. */
   onModelPolicyChanged?: (listener: () => void) => () => void;
 }>;
+
+/** Additional request lifetime; never replaces the authenticated access grant. */
+export type AdmittedRunInvocationAuthority = Readonly<{
+  participationAuthority?: AdmittedRunOperatorAuthority;
+  participationCeiling?: import("./participation-ceiling.js").BoundParticipationCeiling;
+  assertCurrent: () => void;
+  signal?: AbortSignal;
+  release?: () => void;
+}>;
